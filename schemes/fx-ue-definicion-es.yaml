@@ -9,4 +9,4 @@ scheme:
   uri: "https://example.invalid/fixture/ue-definicion-es/"
   resolve:
     kind: skos_file
-    path: "vocabularies/fixtures/ue-definicion-es.fixture.ttl"
+    path: "fixtures/ue-definicion-es.fixture.ttl"

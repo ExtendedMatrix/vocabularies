@@ -1,0 +1,18 @@
+# Who reviews what. A pull request needs the approval of an owner of every
+# path it touches. Community profiles add a line for their own folder, with
+# their curators, in the pull request that creates them.
+
+# Governance and tools
+/README.md          @zalmoxes-laran
+/CONTRIBUTING.md    @zalmoxes-laran
+/LICENSE            @zalmoxes-laran
+/LICENSING.md       @zalmoxes-laran
+/.github/           @zalmoxes-laran
+/tools/             @zalmoxes-laran
+/tests/             @zalmoxes-laran
+
+# The core modules and the cards of the schemes they align with
+/skos/              @zalmoxes-laran
+/schemes/           @zalmoxes-laran
+/alignments/        @zalmoxes-laran
+/fixtures/          @zalmoxes-laran

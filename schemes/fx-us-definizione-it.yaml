@@ -9,5 +9,5 @@ scheme:
   uri: "https://example.invalid/fixture/us-definizione-it/"
   resolve:
     kind: skos_file
-    path: "vocabularies/fixtures/us-definizione-it.fixture.ttl"
+    path: "fixtures/us-definizione-it.fixture.ttl"
   note: "Concetti inventati. Serve a provare la risoluzione dell'etichetta e l'allineamento."

@@ -1,0 +1,4 @@
+rdflib>=7
+pyyaml>=6
+jsonschema>=4.18
+pytest>=8

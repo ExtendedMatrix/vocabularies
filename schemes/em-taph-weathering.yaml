@@ -10,6 +10,8 @@ scheme:
   authority: Extended Matrix
   origin: originated
   version: "0.1.0"
+  lifecycle: proposed
+  curators: ["@zalmoxes-laran"]
   labels:
     en: "Bone weathering stages (Behrensmeyer 1978)"
     it: "Stadi di alterazione dell'osso (Behrensmeyer 1978)"
@@ -19,7 +21,7 @@ scheme:
   attribution: "Extended Matrix — vocabolario originato in StratiGraph WP3 (CNR-ISPC). Stadi da Behrensmeyer, A. K. 1978, Paleobiology 4(2): 150-162; definizioni riformulate, non trascritte."
   resolve:
     kind: skos_file
-    path: "vocabularies/skos/taph-weathering-behrensmeyer.ttl"
+    path: "skos/taph-weathering-behrensmeyer.ttl"
   note: >
     L'authority e' Extended Matrix, non StratiGraph, e la differenza e'
     deliberata: StratiGraph e' un progetto con una data di fine, Extended Matrix

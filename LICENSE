@@ -1,0 +1,17 @@
+The VOCABULARIES in this repository — the SKOS modules in `skos/`, the scheme
+cards in `schemes/`, the alignments in `alignments/`, the fixtures in
+`fixtures/` — and the text of the specifications are licensed under the
+
+    Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+    Human-readable summary: https://creativecommons.org/licenses/by/4.0/
+    Legal code:             https://creativecommons.org/licenses/by/4.0/legalcode
+
+Copyright 2026 Consiglio Nazionale delle Ricerche — Istituto di Scienze del
+Patrimonio Culturale (CNR-ISPC), and the contributors named in each module's
+attribution and in the history of this repository.
+
+Attribute as each module's card (`schemes/*.yaml`, key `attribution`) says.
+
+JSON schemas are dedicated to the public domain (CC0 1.0) and the tools are
+under the EUPL-1.2: see LICENSING.md, which says where each line falls and why.

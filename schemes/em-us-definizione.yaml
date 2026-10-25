@@ -7,6 +7,8 @@ scheme:
   authority: Extended Matrix
   origin: originated
   version: "0.1.0"
+  lifecycle: proposed
+  curators: ["@zalmoxes-laran"]
   labels:
     it: "Definizione dell'unità stratigrafica (scheda US, Extended Matrix)"
     en: "Definition of the stratigraphic unit (US sheet, Extended Matrix)"
@@ -16,7 +18,7 @@ scheme:
   attribution: "Extended Matrix — vocabolario originato in StratiGraph WP3 (CNR-ISPC). Termini raccolti dal thesaurus e dall'interfaccia di PyArchInit (progetto pyArchInit, GPL); definizioni riformulate, non trascritte."
   resolve:
     kind: skos_file
-    path: "vocabularies/skos/us-definizione.ttl"
+    path: "skos/us-definizione.ttl"
   # SPEC §3.3: etichette operative subito, corrette dopo la verifica. Solo `it`
   # viene dalle fonti; le altre sono state scritte con il modulo (in parte dai
   # dati d'esempio multilingue di PyArchInit) e nessuno le ha ancora verificate.

@@ -10,4 +10,4 @@ dimostrare due cose che si dimostrano solo con dei dati veri in mano:
 
 I concetti reali dell'ICCD stanno altrove (`Standard-catalografici/`,
 CC BY-SA 3.0 IT) e questo repository li REFERENZIA, non li incorpora:
-vedi `vocabularies/schemes/`.
+vedi `schemes/`.

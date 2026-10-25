@@ -7,7 +7,7 @@
 # SPEC §3.2, decisione di E.D. del 27 settembre 2026): i campi continuano a citare
 # questo schema — la norma è questa — e si risolvono con quello. Il giorno in cui
 # esce lo SKOS: `resolve:` qui, un allineamento em-us-* → iccd-us-* in
-# vocabularies/alignments/, e `provisional` si toglie.
+# alignments/, e `provisional` si toglie.
 scheme:
   id: iccd-us-affidabilita
   authority: ICCD
