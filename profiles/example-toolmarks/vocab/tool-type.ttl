@@ -1,0 +1,31 @@
+# EXAMPLE — not a vocabulary to cite. A three-concept SKOS scheme that shows
+# what the qualia vocabulary of an EM Profile looks like (profiles/SPEC.md §3).
+# The namespace is example.org on purpose: a real profile's vocabulary lives
+# under https://w3id.org/extendedmatrix/vocab/<module>/ like the core modules.
+
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix tt:   <https://example.org/em-profiles/example-toolmarks/vocab/tool-type/> .
+
+tt: a skos:ConceptScheme ;
+    dct:title "Tool that left the marks (example)"@en ;
+    dct:description "Example qualia vocabulary of the example-toolmarks profile: the hand tool whose marks are read on a dressed stone face."@en ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:versionInfo "0.1.0" ;
+    skos:hasTopConcept tt:point-chisel, tt:flat-chisel, tt:toothed-chisel .
+
+tt:point-chisel a skos:Concept ; skos:inScheme tt: ; skos:topConceptOf tt: ;
+    skos:prefLabel "point chisel"@en ;
+    skos:definition "A chisel ending in a point, which leaves short furrows or pits."@en ;
+    dct:source "Example concept written for the EM Profiles specification." .
+
+tt:flat-chisel a skos:Concept ; skos:inScheme tt: ; skos:topConceptOf tt: ;
+    skos:prefLabel "flat chisel"@en ;
+    skos:definition "A chisel with a straight cutting edge, which leaves flat parallel strokes."@en ;
+    dct:source "Example concept written for the EM Profiles specification." .
+
+tt:toothed-chisel a skos:Concept ; skos:inScheme tt: ; skos:topConceptOf tt: ;
+    skos:prefLabel "toothed chisel"@en ;
+    skos:definition "A chisel whose edge is cut into teeth, which leaves bands of fine parallel grooves."@en ;
+    dct:source "Example concept written for the EM Profiles specification." .

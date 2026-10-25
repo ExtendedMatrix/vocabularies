@@ -1,0 +1,31 @@
+{
+  "header": {
+    "format": "em.json",
+    "version": "1.1",
+    "schema_version": 2,
+    "generator": {"tool": "hand-written example", "version": "0.1"},
+    "datamodel_versions": {"nodes": "1.6.37", "connections": "1.6.49"},
+    "profiles": [
+      {"iri": "https://example.org/em-profiles/example-toolmarks", "version": "0.1.0"}
+    ]
+  },
+  "graphs": {
+    "block1": {
+      "graph_id": "block1",
+      "nodes": [
+        {"id": "ul1", "node_type": "UL", "name": "UL1", "description": "Dressing of the north face"},
+        {"id": "mf1", "node_type": "tm:mark_field", "name": "MF1", "description": "Toothed-chisel band, upper margin",
+         "data": {"em_specializes": "UL", "tm_face": "north"}},
+        {"id": "mf2", "node_type": "tm:mark_field", "name": "MF2", "description": "Toothed-chisel band, lower margin",
+         "data": {"em_specializes": "UL", "tm_face": "north"}},
+        {"id": "d1", "node_type": "document", "name": "D.01", "description": "Map of the marks on the north face",
+         "data": {"em_kind": "tm:mark_map"}}
+      ],
+      "edges": [
+        {"id": "e1", "edge_type": "tm:same_tool_as", "source": "mf1", "target": "mf2",
+         "attributes": {"em_family": "other", "em_propagates": false}}
+      ]
+    }
+  },
+  "active_graph_id": "block1"
+}

@@ -6,7 +6,7 @@ purpose: when something is not covered, open an issue and ask.
 
 ## How a change arrives
 
-1. **Open an issue** when you want to propose a new module or a
+1. **Open an issue** when you want to propose a new module, a new profile or a
    change in meaning (a concept split, merged or withdrawn). Say what you need
    to record, show an example, and say why no existing vocabulary covers it —
    checked, not assumed: if the term already lives in the Getty AAT, PeriodO or
@@ -72,6 +72,13 @@ An alignment (`alignments/*.yaml`) says `skos:exactMatch`, `closeMatch`,
 another scheme. Every alignment is `proposed` until a person with standing in
 the target vocabulary has checked it; then it becomes `verified` and says
 `by:` whom. A match nobody has checked is never served as though it had been.
+
+## Profiles
+
+A community profile lives in `profiles/<name>/` with its manifest
+`profile.json`. The rules are in `profiles/SPEC.md`; the curators of a
+profile are added to `.github/CODEOWNERS` for its folder in the pull request
+that creates it.
 
 ## Licence of contributions
 

@@ -1,0 +1,107 @@
+{
+  "$schema": "https://w3id.org/extendedmatrix/schemas/profile.v0.1.schema.json",
+  "profile_format": "0.1",
+  "iri": "https://example.org/em-profiles/example-toolmarks",
+  "name": "example-toolmarks",
+  "prefix": "tm",
+  "version": "0.1.0",
+  "lifecycle": "proposed",
+  "example": true,
+  "title": {"en": "Tool marks on dressed stone (example profile)"},
+  "description": {"en": "A minimal profile that illustrates the EM Profiles specification: a community that reads the marks hand tools leave on dressed stone. Not a profile to cite."},
+  "curators": ["@zalmoxes-laran"],
+  "license": "CC BY 4.0",
+  "attribution": "Extended Matrix — example written for the EM Profiles specification (CNR-ISPC).",
+  "is_profile_of": [
+    {"iri": "https://w3id.org/extendedmatrix/spec/em-json/", "version": "1.1", "label": "em.json"},
+    {"iri": "https://w3id.org/extendedmatrix/core/", "version": "1.6", "label": "EM core (datamodel)"}
+  ],
+  "qualia_vocabularies": [
+    {
+      "property_type": "tm:tool",
+      "label": {"en": "Tool"},
+      "scheme": "https://example.org/em-profiles/example-toolmarks/vocab/tool-type/",
+      "version": "0.1.0",
+      "path": "vocab/tool-type.ttl",
+      "mapping": {"iri": "http://www.cidoc-crm.org/cidoc-crm/P125_used_object_of_type", "label": "crm:P125 used object of type"}
+    }
+  ],
+  "extractor_types": [
+    {
+      "id": "tm:mark_reading",
+      "label": {"en": "Reading of tool marks"},
+      "description": {"en": "Identifying the tool from the shape, width and spacing of the marks on a face, on a photograph under raking light or on a 3D model."},
+      "specializes": "extractor",
+      "input_formats": [
+        {"media_type": "image/tiff", "extensions": [".tif", ".tiff"]},
+        {"media_type": "model/gltf-binary", "extensions": [".glb"]}
+      ],
+      "source_documents": ["document", "tm:mark_map"],
+      "produces": ["tm:tool"]
+    }
+  ],
+  "document_types": [
+    {
+      "id": "tm:mark_map",
+      "label": {"en": "Map of tool marks"},
+      "description": {"en": "A drawing of a stone face on which each field of marks is outlined and labelled."},
+      "specializes": "document",
+      "content_nature": "2d_object",
+      "formats": [{"media_type": "image/svg+xml", "extensions": [".svg"]}]
+    }
+  ],
+  "node_types": [
+    {
+      "type": "tm:mark_field",
+      "label": {"en": "Field of tool marks"},
+      "description": {"en": "The area of a face worked with one tool in one pass: a working unit read at a finer grain."},
+      "specializes": "UL",
+      "data_keys": {"tm_face": "Which face of the block (free text)."},
+      "mapping": {"iri": "http://www.cidoc-crm.org/cidoc-crm/E25_Human-Made_Feature", "label": "crm:E25 Human-Made Feature"}
+    }
+  ],
+  "edge_types": [
+    {
+      "type": "tm:same_tool_as",
+      "label": {"en": "Same tool as"},
+      "description": {"en": "Two fields of marks left by the same tool. Says nothing about time: it does not take part in propagation."},
+      "family": "other",
+      "propagates": false,
+      "allowed_connections": [{"source": "tm:mark_field", "target": "tm:mark_field"}],
+      "mapping": {"iri": "http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of", "label": "crm:P130 shows features of"}
+    }
+  ],
+  "visual_rules": {
+    "node_styles": {
+      "tm:mark_field": {
+        "style": {"border_color": "#D86400", "fill_color": "#FFF4E8", "border_style": "dashed", "shape": "rectangle", "border_width": 3},
+        "label_position": "over"
+      }
+    },
+    "edge_style": {
+      "tm:same_tool_as": {"style": {"color": "#D86400", "line_style": "dotted", "width": 1.5}, "label": "Same tool as"}
+    },
+    "matrix": {
+      "tm:mark_field": {"draw": true, "lane": "first_epoch"},
+      "tm:same_tool_as": {"draw": false}
+    }
+  },
+  "plugins": [
+    {
+      "id": "raking-light-viewer",
+      "kind": "viewer",
+      "label": {"en": "Raking-light viewer (example pointer)"},
+      "href": "https://example.org/em-profiles/example-toolmarks/raking-light-viewer",
+      "license": "EUPL-1.2",
+      "handles": ["tm:mark_map", "tm:mark_field"],
+      "descriptor": {
+        "host": "emstudio-side",
+        "transport": ["direct"],
+        "capabilities": ["read-graph", "resolve-asset", "link-selection"],
+        "versions": {"emjson": "1.1", "connector_api": "1.0.0"},
+        "writes": false,
+        "provenance": "none: a viewer writes nothing"
+      }
+    }
+  ]
+}

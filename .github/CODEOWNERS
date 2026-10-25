@@ -16,3 +16,10 @@
 /schemes/           @zalmoxes-laran
 /alignments/        @zalmoxes-laran
 /fixtures/          @zalmoxes-laran
+
+# The EM Profiles specification, its schema, the generated core types, the example
+/profiles/SPEC.md                   @zalmoxes-laran
+/profiles/profile.*.schema.json     @zalmoxes-laran
+/profiles/core-types.json           @zalmoxes-laran
+/profiles/example-toolmarks/        @zalmoxes-laran
+# /profiles/<name>/                 @<curator> @<curator>   ← one line per community profile
