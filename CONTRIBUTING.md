@@ -37,6 +37,11 @@ A module is a SKOS file in `skos/` and a card in `schemes/`. The card must say:
 `unverified_languages` lists the languages whose labels nobody has verified
 yet: they are usable now and marked as drafts on the published page.
 
+`extensible: project` (optional, our modules only) says that a project may add
+terms of its own beside ours — `local:<slug>` on its graph, with who and when,
+never in our namespace (`em-media-role`). A local term many projects use is
+proposed here, with its source.
+
 In the Turtle file the scheme carries `owl:versionInfo` equal to the card's
 `version`, `dct:license`, and every concept carries `skos:prefLabel` in at
 least the source language, a `skos:definition` and its **source**
