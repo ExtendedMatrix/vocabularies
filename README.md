@@ -83,7 +83,8 @@ tools/getty_aat_export.py    a dated export of the Getty AAT (SPARQL, or Linked 
 Today: `iccd-ra-materia` (tier B, the ICCD file as published) and
 `getty-aat-materials` (tier A, the Materials hierarchy of the AAT, exported on
 the day of the release). The alignments between them are in
-`alignments/materials-aat-iccd.yaml`, `proposed` until a person verifies them.
+`alignments/materials-aat-iccd.yaml`: 29 closeMatch, all verified by E.D. on
+18 Nov 2026 (intonaco deliberately left unaligned: the file says why).
 
 ```
 python3 tools/build_packages.py dist --iccd <Standard-catalografici> \
