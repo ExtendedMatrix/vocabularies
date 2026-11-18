@@ -1,0 +1,33 @@
+# Pacchetto EM del vocabolario ICCD della materia (reperti archeologici).
+# FASCIA B (CC BY-SA 3.0 IT): il file SKOS dell'ICCD viaggia SEPARATO e NON
+# MODIFICATO; il builder lo prende dal checkout di Standard-catalografici
+# ($STRATIGRAPH_ICCD_STANDARDS) e ne scrive l'hash nel manifest. Qui non lo
+# copiamo (schemes/iccd-ra-materia.yaml: un vocabolario ha un ciclo di vita suo).
+id: iccd-ra-materia
+version: "2018-09"
+snapshot_date: "2018-09-01"
+title:
+  it: "Thesaurus per la definizione della materia — reperti archeologici (ICCD)"
+  en: "Thesaurus for the definition of material — archaeological finds (ICCD)"
+languages: [it]
+license: "CC BY-SA 3.0 IT"
+license_url: "https://creativecommons.org/licenses/by-sa/3.0/it/"
+tier: B
+attribution: "ICCD — Ministero della Cultura. Thesaurus per la definizione della materia per i reperti archeologici, versione settembre 2018 (M. L. Mancinelli; C. Veninata, M. Porena). CC BY-SA 3.0 IT"
+homepage: "https://github.com/ICCD-MiBACT/Standard-catalografici"
+scheme: "http://dati.beniculturali.it/vocabularies/materia_e_tecnica-ra/def/"
+authority: iccd
+facet: WHAT
+serves: [material_type]
+source:
+  from: iccd_standards
+  path: "strumenti-terminologici/beni archeologici/ICCD_Vocabolario_definizione della materia_reperti archeologici.rdf"
+  file: "source/ICCD_Vocabolario_definizione_della_materia_reperti_archeologici.rdf"
+  format: rdfxml
+  retrieved_from: "https://github.com/ICCD-MiBACT/Standard-catalografici (strumenti-terminologici/beni archeologici)"
+# Il file scrive i broader come «http://th-mtcRa:022»: non sono IRI dello
+# schema. L'INDICE (compilato sulla macchina) li riscrive con questo prefisso;
+# la sorgente resta com'è. La gerarchia si legge comunque anche da skos:narrower.
+index_hints:
+  broader_prefix_map:
+    "http://th-mtcRa:": "http://dati.beniculturali.it/vocabularies/materia_e_tecnica-ra/def/"

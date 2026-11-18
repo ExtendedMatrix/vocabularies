@@ -19,8 +19,10 @@ schemes/      one YAML per vocabulary scheme: ours (origin: originated) and the
 alignments/   skos:exactMatch / closeMatch … between schemes, each proposed or verified
 fixtures/     invented micro-schemes used by the tests; not normative
 profiles/     the EM Profiles specification, its schema, and the community profiles
+packages/     the vocabulary packages (one card each), built by tools/build_packages.py
 tools/        publish_vocab.py — publishes the modules to the site;
-              core_types.py — lists the core types a profile may specialise
+              core_types.py — lists the core types a profile may specialise;
+              build_packages.py, getty_aat_export.py — the packages
 tests/        the checks every pull request must pass
 ```
 
@@ -55,6 +57,38 @@ In an em.json file a quale points at the concept IRI; the label is resolved
 at reading time, in the reader's language. Tools that render recording sheets
 (stratigraph-templates) read the `schemes/` cards to know which scheme a field
 is bound to and where its labels come from.
+
+## Packages: vocabularies installed like fonts
+
+Since 18 November 2026 (MICRO-U, decided by E.D.) the EM tools install
+vocabularies on the machine, in one folder they all share, the way a computer
+installs fonts. A **package** (`<id>-<version>.emvocab.zip`) is the SOURCE of a
+vocabulary, unmodified, with a manifest (`em-vocabulary-package/1`): id,
+version, snapshot date, languages, licence, **tier**, the attribution to show,
+the sha256 of the source. The index is never shipped: each machine compiles
+its own when it installs (`s3dgraphy.authorities.packages`).
+
+```
+packages/<id>/package.yaml   the card of a package: where its source comes from
+tools/build_packages.py      builds the packages and catalog.json (release assets)
+tools/getty_aat_export.py    a dated export of the Getty AAT (SPARQL, or Linked Art)
+```
+
+| Tier | Licence | What travels |
+|---|---|---|
+| A | open (CC0, CC BY, ODC-By) | the package; the terms a file uses may be copied into it |
+| B | share-alike (CC BY-SA) | the package, its source a separate unmodified file; the terms copied keep that licence |
+| C | not redistributable | only the card: the tool fetches the source and keeps it on that machine |
+
+Today: `iccd-ra-materia` (tier B, the ICCD file as published) and
+`getty-aat-materials` (tier A, the Materials hierarchy of the AAT, exported on
+the day of the release). The alignments between them are in
+`alignments/materials-aat-iccd.yaml`, `proposed` until a person verifies them.
+
+```
+python3 tools/build_packages.py dist --iccd <Standard-catalografici> \
+    --export getty-aat-materials=<export.nt> --date <YYYY-MM-DD>
+```
 
 ## Contributing
 
