@@ -2,6 +2,12 @@
 
 **Version 0.1 · Editor's Draft · 25 October 2026**
 
+> **Frozen.** This is version 0.1, kept here unchanged for whoever cites it.
+> From version 0.2 (18 November 2026) the specification, its schemas, its
+> examples and the community packages live in
+> [ExtendedMatrix/em-profiles](https://github.com/ExtendedMatrix/em-profiles).
+> A 0.1 manifest is still read by every 0.2 tool.
+
 | | |
 |---|---|
 | This version | `profiles/SPEC.md` in [ExtendedMatrix/vocabularies](https://github.com/ExtendedMatrix/vocabularies) |

@@ -1,7 +1,8 @@
 # Extended Matrix — vocabularies
 
 The controlled vocabularies of the **Extended Matrix** (EM) ecosystem, and the
-place where scientific communities declare their **profiles**.
+place where the EM Profiles specification was born (0.1, frozen here; from
+0.2 on it lives in [ExtendedMatrix/em-profiles](https://github.com/ExtendedMatrix/em-profiles)).
 
 | | |
 |---|---|
@@ -18,7 +19,7 @@ schemes/      one YAML per vocabulary scheme: ours (origin: originated) and the
               external ones we only declare (ICCD, Getty AAT, iDAI.field …)
 alignments/   skos:exactMatch / closeMatch … between schemes, each proposed or verified
 fixtures/     invented micro-schemes used by the tests; not normative
-profiles/     the EM Profiles specification, its schema, and the community profiles
+profiles/     EM Profiles 0.1, frozen: from 0.2 on, ExtendedMatrix/em-profiles
 packages/     the vocabulary packages (one card each), built by tools/build_packages.py
 tools/        publish_vocab.py — publishes the modules to the site;
               core_types.py — lists the core types a profile may specialise;
@@ -36,12 +37,16 @@ Getty AAT, an application's valuelists). We do not copy it: we give it an
 identity so that our concepts can be aligned with it, and say where it is
 resolved from.
 
-**A profile** is what a scientific community brings to EM: its qualia
-vocabularies, its extractors and documents, its own node and edge types (each
-a species of a core type) with their glyphs, and pointers to its plugins.
-The specification is [`profiles/SPEC.md`](profiles/SPEC.md) (version 0.1,
-Editor's Draft); [`profiles/example-toolmarks/`](profiles/example-toolmarks/)
-is a minimal example.
+**A profile** — a *community package* in the interface of the EM tools — is
+what a scientific community brings to EM: its qualia and their vocabularies,
+its extractors (with their 3D component), combiners and documents, its
+recording sheet, its colours, its labels. **Since 18 November 2026 its
+specification lives in
+[ExtendedMatrix/em-profiles](https://github.com/ExtendedMatrix/em-profiles)**
+(version 0.2, with its schemas, its examples and the community packages); see
+[`profiles/README.md`](profiles/README.md). Version 0.1 stays here, frozen,
+for whoever cites it. A vocabulary shared by several communities is still
+born here, and a package cites it by IRI.
 
 ## Using a module
 

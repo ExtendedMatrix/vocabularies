@@ -17,9 +17,10 @@
 /alignments/        @zalmoxes-laran
 /fixtures/          @zalmoxes-laran
 
-# The EM Profiles specification, its schema, the generated core types, the example
+# EM Profiles 0.1, frozen (from 0.2 on: ExtendedMatrix/em-profiles)
+/profiles/README.md                 @zalmoxes-laran
 /profiles/SPEC.md                   @zalmoxes-laran
 /profiles/profile.*.schema.json     @zalmoxes-laran
 /profiles/core-types.json           @zalmoxes-laran
 /profiles/example-toolmarks/        @zalmoxes-laran
-# /profiles/<name>/                 @<curator> @<curator>   ← one line per community profile
+# community profiles: proposed in ExtendedMatrix/em-profiles, not here

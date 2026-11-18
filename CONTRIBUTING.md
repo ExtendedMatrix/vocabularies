@@ -80,10 +80,12 @@ the target vocabulary has checked it; then it becomes `verified` and says
 
 ## Profiles
 
-A community profile lives in `profiles/<name>/` with its manifest
-`profile.json`. The rules are in `profiles/SPEC.md`; the curators of a
-profile are added to `.github/CODEOWNERS` for its folder in the pull request
-that creates it.
+Community profiles (community packages) are contributed to
+[ExtendedMatrix/em-profiles](https://github.com/ExtendedMatrix/em-profiles),
+which holds the specification from 0.2 on, its schemas and the packages
+(18 November 2026). `profiles/` here keeps version 0.1, frozen, and takes no
+new profile. A vocabulary that several communities share is still proposed
+here, as a module.
 
 ## Licence of contributions
 
